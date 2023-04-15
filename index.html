@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fireworks effect</title>
+        
+        
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-spe-particles-component@^1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+    </head>
+    <body>
+        <a-asset >
+            <a-asset-item id="background" src="./sky_pano_-_barcelona_rooftops/scene.gltf"></a-asset-item>
+        </a-asset>
+
+        <a-scene>
+            
+        <a-sky>
+            <a-entity position="0 1 0" gltf-model="#background" scale="10 10 10"></a-entity>
+        </a-sky>
+            
+            <a-camera position="0 0 35"></a-camera>
+            <a-entity position="5 30 -40" spe-particles="
+            color:#f2e01f,#f2851f;
+            distribution:sphere;
+            randomize-velocity:true;
+            radius:1;
+            particle-count:700;
+            velocity:5;
+            velocity-spread:10;
+            drag:1;
+            max-age:3;
+            duration:-3;
+            blending:additive;
+            active-multiplier:2000;
+            size:0.5,1,2;
+            "></a-entity>
+
+            <a-entity position="35 30 -20" spe-particles="
+            color:#f21f1f,#db5102;
+            distribution:sphere;
+            randomize-velocity:true;
+            radius:1;
+            particle-count:700;
+            velocity:5;
+            velocity-spread:10;
+            drag:1;
+            max-age:3;
+            duration:-2;
+            blending:additive;
+            active-multiplier:2000;
+            size:0.5,1,2;
+            "></a-entity>
+
+            <a-entity position="-25 30 -30" spe-particles="
+            color:#f2f21f,#f21f1f;
+            distribution:sphere;
+            randomize-velocity:true;
+            radius:1;
+            particle-count:500;
+            velocity:5;
+            velocity-spread:10;
+            drag:1;
+            max-age:2;
+            duration:-4;
+            blending:additive;
+            active-multiplier:2000;
+            size:0.5,1,2;
+            "></a-entity>
+
+            
+        </a-scene> 
+    </body>
+</html>
